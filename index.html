@@ -1,4 +1,1097 @@
-Hello World
-Testing
-Tester
-Test
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="Free Web tutorials">
+		<meta name="author" content="John Doe">
+		<title>IndrasWork - Home</title>
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap"
+			rel="stylesheet" />
+
+		<link href="assets/css/style.css" rel="stylesheet" />
+
+		<!-- JS -->
+		<script src="assets/js/script.js" defer></script>
+	</head>
+	<body>
+		<div id="loader" class="flex justify-center items-center bg-bm-oxford/70 backdrop-blur-md fixed w-full h-full z-[999]">
+			<div class="border-bm-flash rounded-full border-t-4 w-16 h-16 animate-spin"></div>
+		</div>
+		<!-- Header Start -->
+		<header
+			class="bg-transparent w-full top-0 left-0 absolute flex items-center z-10">
+			<div class="w-[1280px] mx-auto">
+				<div class="flex items-center justify-between relative py-2">
+					<div class="w-fit px-4">
+						<a
+							href="./index.html"
+							class="logo flex items-center md:w-44">
+							<img
+								class="w-12 h-12 mr-1"
+								src="assets/img/indras-logo-amber.svg"
+								alt="Portos Logo" />
+
+							<div
+								class="hidden md:flex md:flex-wrap md:items-center md:w-full">
+								<div
+									class="md:text-lg md:font-bold md:uppercase text-bm-amber leading-none">
+									work
+								</div>
+								<div
+									class="md:text-[11px] md:text-bm-flash leading-none">
+									dev workshop
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="flex items-center px-4">
+						<button
+							id="toggle-menu"
+							class="lg:hidden space-y-2 block absolute right-4">
+							<span
+								class="burger origin-top-right transition-ease"></span>
+							<span
+								class="ml-auto burger-short transition-ease"></span>
+							<span
+								class="burger origin-bottom-right transition-ease"></span>
+						</button>
+
+						<nav
+							id="full-menu"
+							class="hidden absolute px-6 py-4 bg-bm-amber text-bm-oxford font-semibold text-base shadow-lg rounded-lg max-w-[230px] w-full right-4 top-full lg:bg-none lg:text-bm-flash lg:flex lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+							<ul class="block lg:flex">
+								<li
+									class="menu-1 mb-2 px-4 py-2 transition-ease lg:hover:text-bm-amber rounded-md hover:text-bm-flash hover:bg-bm-federal  hover:shadow-sm w-fit">
+									<a href="#about">About Me</a>
+								</li>
+								<li
+									class="menu-2 mb-2 px-4 py-2 transition-ease lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a href="#portfolio">Portfolio</a>
+								</li>
+								<li
+									class="menu-3 mb-2 px-4 py-2 transition-ease lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a href="#skills">Skills</a>
+								</li>
+								<li
+									class="menu-4 mb-2 px-4 py-2 transition-ease lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a href="#blog">Blog</a>
+								</li>
+								<li
+									class="menu-5 group mb-2 px-4 py-2 transition-ease lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a class="flex" href="#contact">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 24 24"
+											fill="currentColor"
+											class="hidden w-6 h-6 text-bm-flash lg:block group-hover:text-bm-gold group-hover:animate-bounce-l">
+											<path
+												fill-rule="evenodd"
+												d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
+												clip-rule="evenodd" />
+										</svg>
+
+										Contact Me
+
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 24 24"
+											fill="currentColor"
+											class="hidden w-6 h-6 text-bm-flash lg:block group-hover:text-bm-gold group-hover:animate-bounce-r">
+											<path
+												fill-rule="evenodd"
+												d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+												clip-rule="evenodd" />
+										</svg>
+									</a>
+								</li>
+								<li class="menu-6 mb-2 px-4 w-fit flex items-center">
+									<label
+											for="lang"
+											class="flex items-center cursor-pointer space-x-2">
+
+											<div class="w-4 h-4 rounded-full overflow-hidden">
+											<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-id" viewBox="0 0 512 512">
+												<path fill="#e70011" d="M0 0h512v256H0Z"/>
+												<path fill="#fff" d="M0 256h512v256H0Z"/>
+											  </svg>
+											</div>
+											<div class="bg-slate-600 w-8 h-[17px] rounded-full ">
+												<input
+													class="peer sr-only"
+													type="checkbox"
+													name="lang"
+													id="lang" />
+												<div
+													class="bg-bm-amber w-4 h-4 rounded-full peer-checked:translate-x-4 transition-ease"></div>
+											</div>
+											<div class="w-4 h-4 rounded-full overflow-hidden">
+											<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-gb" viewBox="0 0 512 512">
+												<path fill="#012169" d="M0 0h512v512H0z"/>
+												<path fill="#FFF" d="M512 0v64L322 256l190 187v69h-67L254 324 68 512H0v-68l186-187L0 74V0h62l192 188L440 0z"/>
+												<path fill="#C8102E" d="m184 324 11 34L42 512H0v-3l184-185zm124-12 54 8 150 147v45L308 312zM512 0 320 196l-4-44L466 0h46zM0 1l193 189-59-8L0 49V1z"/>
+												<path fill="#FFF" d="M176 0v512h160V0H176zM0 176v160h512V176H0z"/>
+												<path fill="#C8102E" d="M0 208v96h512v-96H0zM208 0v512h96V0h-96z"/>
+											  </svg>
+											</div>
+										</label>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Ends -->
+
+		<!-- Hero Start -->
+		<section
+			id="hero"
+			class="pt-28 pb-80 md:pb-[430px] lg:pb-0 bg-gradient-to-b from-bm-federal to-bm-oxford min-h-screen">
+			<div class="max-w-6xl mx-auto">
+				<div class="w-full px-8">
+					<div class="flex flex-wrap lg:flex-nowrap">
+						<div
+							class="flex items-center max-w-md md:max-w-xl lg:w-1/2 lg:h-[500px]">
+							<div class="flex flex-wrap">
+								<div class="hero-1 py-2 w-fit text-xl font-semibold">
+									Hello,
+								</div>
+								<h1 class="hero-2 text-7xl font-bold w-full mb-2">
+									I'm
+									<span class="text-bm-amber">Indras</span>
+								</h1>
+								<h2 class="hero-3 text-3xl italic mb-2">
+									I build awesome websites for people :D
+								</h2>
+
+								<div class="hero-4">
+									<p class="pt-8">
+										I'm a "Super" Dev... a Fullstack Web
+										Developer that could handle both sides
+										of the force, front-end and back-end.
+									</p>
+									<p class="pt-6">
+										Need help with a project? Let's work
+										together.
+									</p>
+								</div>
+
+								<div class="hero-5 mt-8">
+									<a
+										href="#contact"
+										class="group flex border border-bm-amber bg-transparent rounded text-bm-amber px-4 py-2 font-semibold text-base shadow-lg transition-ease hover:bg-bm-gold hover:text-bm-federal">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 24 24"
+											fill="currentColor"
+											class="w-6 h-6 group-hover:animate-bounce-l">
+											<path
+												fill-rule="evenodd"
+												d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
+												clip-rule="evenodd" />
+										</svg>
+
+										Contact Me
+
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 24 24"
+											fill="currentColor"
+											class="w-6 h-6 group-hover:animate-bounce-r">
+											<path
+												fill-rule="evenodd"
+												d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+												clip-rule="evenodd" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="avatar relative flex w-full justify-center lg:w-1/2">
+							<svg
+								class="absolute top-0 w-96 h-96 md:w-[500px] md:h-[500px]"
+								viewBox="0 0 200 200"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									fill="#E7E8EA"
+									d="M51.5,-45.8C61.3,-28.8,60.1,-7.7,54.8,11.3C49.5,30.2,40.1,46.9,24.6,56.4C9.1,66,-12.5,68.3,-31.5,60.9C-50.5,53.5,-66.9,36.3,-70.6,17C-74.3,-2.2,-65.2,-23.5,-51.3,-41.5C-37.4,-59.4,-18.7,-74,1.1,-74.9C20.8,-75.7,41.7,-62.8,51.5,-45.8Z"
+									transform="translate(100 100)" />
+							</svg>
+
+							<img
+								class="absolute top-0 w-96 h-96 md:w-[500px] md:h-[500px]"
+								src="assets/img/indras-avatar-super.png"
+								alt="Indras Avatar Super" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Hero Ends -->
+
+		<!-- Next Arrow Start -->
+		<div class="group w-full hidden lg:block relative">
+			<a
+				href="#trophy"
+				class="absolute left-1/2 -translate-x-1/2 bottom-0 animate-pulse text-bm-amber transition-ease group-hover:text-bm-gold">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-12 h-12">
+					<path
+						fill-rule="evenodd"
+						d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-.53 14.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V8.25a.75.75 0 00-1.5 0v5.69l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z"
+						clip-rule="evenodd" />
+				</svg>
+			</a>
+		</div>
+		<!-- Next Arrow Ends -->
+
+		<!-- Trophy Start -->
+		<section id="trophy" class="bg-bm-federal min-h-max py-32">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-8">
+						<div class="mb-12 space-y-4 max-w-lg mx-auto">
+							<div class="trophy-title-2 flex mx-auto items-center bg-bm-oxford border-2 border-bm-gold rounded-full p-2 w-fit text-bm-gold">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
+								  </svg>
+
+							</div>
+							<h2 class="trophy-title-1 text-3xl font-bold sm:text-4xl flex justify-center">
+								The journey has just begun
+							</h2>
+						</div>
+
+						<div
+							id="boxes"
+							class="grid grid-cols-1 space-y-12 max-w-sm mx-auto lg:grid-cols-3 lg:space-y-0 lg:max-w-full lg:gap-6">
+							<div
+								class="trophy-box-1 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-80 h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
+								<div>
+									<div
+										id="num-1"
+										class="text-6xl font-bold flex justify-center">
+										0
+									</div>
+									<div class="text-3xl flex justify-center">
+										Years
+									</div>
+									<div class="text-3xl flex justify-center">
+										Experience
+									</div>
+								</div>
+
+								<div
+									class="absolute -top-6 left-4 text-bm-oxford bg-bm-amber p-2 rounded-tr-lg group-hover:border-b-2 group-hover:border-r-2 group-hover:border-bm-federal">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										class="w-8 h-8">
+										<path
+											fill-rule="evenodd"
+											d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
+											clip-rule="evenodd" />
+									</svg>
+								</div>
+							</div>
+
+							<div
+								class="trophy-box-2 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-80 h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
+								<div>
+									<div
+										id="num-2"
+										class="text-6xl font-bold flex justify-center">
+										0
+									</div>
+									<div class="text-3xl flex justify-center">
+										Projects
+									</div>
+								</div>
+
+								<div
+									class="absolute -top-6 left-4 text-bm-oxford bg-bm-amber p-2 rounded-tr-lg group-hover:border-b-2 group-hover:border-r-2 group-hover:border-bm-federal">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										class="w-8 h-8">
+										<path
+											fill-rule="evenodd"
+											d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+											clip-rule="evenodd" />
+										<path
+											d="M3 18.4v-2.796a4.3 4.3 0 00.713.31A26.226 26.226 0 0012 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 01-6.477-.427C4.047 21.128 3 19.852 3 18.4z" />
+									</svg>
+								</div>
+							</div>
+
+							<div
+								class="trophy-box-3 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-80 h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
+								<div>
+									<div
+										id="num-3"
+										class="text-6xl font-bold flex justify-center">
+										0
+									</div>
+									<div class="text-3xl flex justify-center">
+										Happy
+									</div>
+									<div class="text-3xl flex justify-center">
+										Customers
+									</div>
+								</div>
+
+								<div
+									class="absolute -top-6 left-4 text-bm-oxford bg-bm-amber p-2 rounded-tr-lg group-hover:border-b-2 group-hover:border-r-2 group-hover:border-bm-federal">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										class="w-8 h-8">
+										<path
+											fill-rule="evenodd"
+											d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z"
+											clip-rule="evenodd" />
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Trophy Ends -->
+
+		<!-- About Start -->
+		<section id="about" class="bg-bm-oxford min-h-screen pt-32 pb-16">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-8">
+						<div
+							class="flex flex-wrap max-w-sm mx-auto md:max-w-2xl lg:mb-20 lg:max-w-full lg:space-x-12">
+							<div
+								class="lg:flex lg:flex-col mb-20 lg:space-y-6 lg:mb-0 lg:relative">
+								<div
+									class="flex flex-wrap justify-center md:flex-nowrap">
+									<div
+										class="relative mb-[360px] mr-72 md:mb-44 lg:mb-[420px]">
+										<div
+											class="pic-1 w-56 h-[284px] border-2 border-bm-flax absolute top-8 left-8 rounded-md"></div>
+										<div
+											class="pic-2 w-56 h-[284px] border-2 border-bm-gold absolute top-4 left-4 rounded-md"></div>
+
+										<div
+											class="pic-3 w-56 h-[284px] absolute top-0 left-0 rounded-md overflow-hidden">
+											<img
+												src="assets/img/indras-photo.jpg"
+												class="w-56 object-cover grayscale-[50%] transition-ease hover:grayscale-0" />
+										</div>
+									</div>
+
+									<div class="flex flex-col">
+										<h2
+											class="about-1 text-3xl font-bold sm:text-4xl mb-10">
+											A few words about me
+										</h2>
+										<p class="about-2 mb-2">
+											Hey there, my name is Indras, a web
+											developer from Bogor, West Java,
+											Indonesia.
+										</p>
+										<p class="about-3 mb-2">
+											My mission is to help small
+											businesses get noticed with their
+											<span class="uppercase"
+												>awesome</span
+											>
+											online presence.
+										</p>
+										<p class="about-4 mb-6">
+											Currently, my main focus is on the
+											front-end using HTML, Tailwind, PHP,
+											Laravel, Vue, &amp Inertia.
+										</p>
+
+										<p class="about-5 mb-2">Get connected!</p>
+										<div class="flex space-x-4">
+											<a
+												class="about-6 group w-12 h-12 flex justify-center items-center border-2 border-bm-amber bg-transparent p-2 rounded-full hover:border-none hover:bg-bm-gold"
+												href=""
+												target="_blank">
+												<svg
+													class="text-bm-gold transition-ease group-hover:text-bm-federal"
+													fill="currentColor"
+													role="img"
+													viewBox="0 0 24 24"
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24">
+													<title>LinkedIn</title>
+													<path
+														d="M20.447 20.452h-3.554v-5.569c0 -1.328 -0.027 -3.037 -1.852 -3.037 -1.853 0 -2.136 1.445 -2.136 2.939v5.667H9.351V9h3.414v1.561h0.046c0.477 -0.9 1.637 -1.85 3.37 -1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0 -2.063 -0.926 -2.063 -2.065 0 -1.138 0.92 -2.063 2.063 -2.063 1.14 0 2.064 0.925 2.064 2.063 0 1.139 -0.925 2.065 -2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C0.792 0 0 0.774 0 1.729v20.542C0 23.227 0.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0h0.003z" />
+												</svg>
+											</a>
+
+											<a
+												class="about-7 group w-12 h-12 flex justify-center items-center border-2 border-bm-amber bg-transparent p-2 rounded-full hover:border-none hover:bg-bm-gold"
+												href=""
+												target="_blank">
+												<svg
+													class="text-bm-gold transition-ease group-hover:text-bm-federal"
+													fill="currentColor"
+													role="img"
+													viewBox="0 0 24 24"
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24">
+													<title>GitHub</title>
+													<path
+														d="M12 0.297c-6.63 0 -12 5.373 -12 12 0 5.303 3.438 9.8 8.205 11.385 0.6 0.113 0.82 -0.258 0.82 -0.577 0 -0.285 -0.01 -1.04 -0.015 -2.04 -3.338 0.724 -4.042 -1.61 -4.042 -1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087 -0.744 0.084 -0.729 0.084 -0.729 1.205 0.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495 0.998 0.108 -0.776 0.417 -1.305 0.76 -1.605 -2.665 -0.3 -5.466 -1.332 -5.466 -5.93 0 -1.31 0.465 -2.38 1.235 -3.22 -0.135 -0.303 -0.54 -1.523 0.105 -3.176 0 0 1.005 -0.322 3.3 1.23 0.96 -0.267 1.98 -0.399 3 -0.405 1.02 0.006 2.04 0.138 3 0.405 2.28 -1.552 3.285 -1.23 3.285 -1.23 0.645 1.653 0.24 2.873 0.12 3.176 0.765 0.84 1.23 1.91 1.23 3.22 0 4.61 -2.805 5.625 -5.475 5.92 0.42 0.36 0.81 1.096 0.81 2.22 0 1.606 -0.015 2.896 -0.015 3.286 0 0.315 0.21 0.69 0.825 0.57C20.565 22.092 24 17.592 24 12.297c0 -6.627 -5.373 -12 -12 -12" />
+												</svg>
+											</a>
+
+											<a
+												class="about-8 group w-12 h-12 flex justify-center items-center border-2 border-bm-amber bg-transparent p-2 rounded-full hover:border-none hover:bg-bm-gold"
+												href=""
+												target="_blank">
+												<svg
+													class="text-bm-gold transition-ease group-hover:text-bm-federal"
+													fill="currentColor"
+													role="img"
+													viewBox="0 0 24 24"
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24">
+													<title>Instagram</title>
+													<path
+														d="M12 0C8.74 0 8.333 0.015 7.053 0.072 5.775 0.132 4.905 0.333 4.14 0.63c-0.789 0.306 -1.459 0.717 -2.126 1.384S0.935 3.35 0.63 4.14C0.333 4.905 0.131 5.775 0.072 7.053 0.012 8.333 0 8.74 0 12s0.015 3.667 0.072 4.947c0.06 1.277 0.261 2.148 0.558 2.913 0.306 0.788 0.717 1.459 1.384 2.126 0.667 0.666 1.336 1.079 2.126 1.384 0.766 0.296 1.636 0.499 2.913 0.558C8.333 23.988 8.74 24 12 24s3.667 -0.015 4.947 -0.072c1.277 -0.06 2.148 -0.262 2.913 -0.558 0.788 -0.306 1.459 -0.718 2.126 -1.384 0.666 -0.667 1.079 -1.335 1.384 -2.126 0.296 -0.765 0.499 -1.636 0.558 -2.913 0.06 -1.28 0.072 -1.687 0.072 -4.947s-0.015 -3.667 -0.072 -4.947c-0.06 -1.277 -0.262 -2.149 -0.558 -2.913 -0.306 -0.789 -0.718 -1.459 -1.384 -2.126C21.319 1.347 20.651 0.935 19.86 0.63c-0.765 -0.297 -1.636 -0.499 -2.913 -0.558C15.667 0.012 15.26 0 12 0zm0 2.16c3.203 0 3.585 0.016 4.85 0.071 1.17 0.055 1.805 0.249 2.227 0.415 0.562 0.217 0.96 0.477 1.382 0.896 0.419 0.42 0.679 0.819 0.896 1.381 0.164 0.422 0.36 1.057 0.413 2.227 0.057 1.266 0.07 1.646 0.07 4.85s-0.015 3.585 -0.074 4.85c-0.061 1.17 -0.256 1.805 -0.421 2.227 -0.224 0.562 -0.479 0.96 -0.899 1.382 -0.419 0.419 -0.824 0.679 -1.38 0.896 -0.42 0.164 -1.065 0.36 -2.235 0.413 -1.274 0.057 -1.649 0.07 -4.859 0.07 -3.211 0 -3.586 -0.015 -4.859 -0.074 -1.171 -0.061 -1.816 -0.256 -2.236 -0.421 -0.569 -0.224 -0.96 -0.479 -1.379 -0.899 -0.421 -0.419 -0.69 -0.824 -0.9 -1.38 -0.165 -0.42 -0.359 -1.065 -0.42 -2.235 -0.045 -1.26 -0.061 -1.649 -0.061 -4.844 0 -3.196 0.016 -3.586 0.061 -4.861 0.061 -1.17 0.255 -1.814 0.42 -2.234 0.21 -0.57 0.479 -0.96 0.9 -1.381 0.419 -0.419 0.81 -0.689 1.379 -0.898 0.42 -0.166 1.051 -0.361 2.221 -0.421 1.275 -0.045 1.65 -0.06 4.859 -0.06l0.045 0.03zm0 3.678c-3.405 0 -6.162 2.76 -6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162 -2.76 6.162 -6.162 0 -3.405 -2.76 -6.162 -6.162 -6.162zM12 16c-2.21 0 -4 -1.79 -4 -4s1.79 -4 4 -4 4 1.79 4 4 -1.79 4 -4 4zm7.846 -10.405c0 0.795 -0.646 1.44 -1.44 1.44 -0.795 0 -1.44 -0.646 -1.44 -1.44 0 -0.794 0.646 -1.439 1.44 -1.439 0.793 -0.001 1.44 0.645 1.44 1.439z" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="mb-24 space-y-4 lg:flex lg:flex-wrap lg:space-y-0 lg:mb-0">
+								<div class="mb-6">
+									<h2
+										class="work-1 text-3xl font-bold sm:text-4xl mb-10">
+										What I can Do
+									</h2>
+									<div class="work-2 space-y-6">
+										<p>
+											I'm here to help you get that
+											awesome online presence that you've
+											always wanted.
+										</p>
+
+										<p>
+											I can help you put together your
+											amazing photos and articles either
+											by following your own design or I
+											could arrange them for you. Turning
+											them into a completely outstanding
+											website that you can be proud of.
+											Thus, boosting your business to the
+											next level.
+										</p>
+										<p>
+											But, most importantly, I want to
+											give you my absolutely best services
+											at the best price. So don't hesitate
+											to contact me to get a price
+											tailored to your specific needs and
+											budget.
+										</p>
+
+										<div class="w-fit">
+											<a
+												href="#contact"
+												class="group flex border border-bm-amber bg-transparent rounded text-bm-amber px-4 py-2 font-semibold text-base shadow-lg transition-ease hover:bg-bm-gold hover:text-bm-federal">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 24 24"
+													fill="currentColor"
+													class="w-6 h-6 group-hover:animate-bounce-l">
+													<path
+														fill-rule="evenodd"
+														d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
+														clip-rule="evenodd" />
+												</svg>
+
+												Contact Me
+
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 24 24"
+													fill="currentColor"
+													class="w-6 h-6 group-hover:animate-bounce-r">
+													<path
+														fill-rule="evenodd"
+														d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+														clip-rule="evenodd" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- About Ends -->
+
+		<!-- Portfolio Start -->
+		<section id="portfolio" class="bg-bm-federal min-h-screen pt-32 pb-16">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-8">
+						<div class="mb-12 lg:flex lg:justify-between">
+							<div class="mb-12 space-y-4 max-w-lg">
+								<h2 class="portfolio-1 text-3xl font-bold sm:text-4xl">
+									Portfolio
+								</h2>
+								<p class="portfolio-2 italic">
+									Here's a collection of my work ranging from
+									personal, client projects to other
+									professional work.
+								</p>
+							</div>
+
+							<div
+								class="portfolio-filter flex justify-center items-center text-base font-semibold">
+								<div
+									class="filter relative bg-bm-amber px-6 py-4 rounded-l-md text-bm-oxford hover:text-bm-oxford transition-ease"
+									onclick="toggleActive(0)">
+									All Projects
+									<div
+										class="absolute -bottom-[10px] left-1/2 -translate-1/2 filter-active arrow-down"></div>
+								</div>
+
+								<div
+									class="filter relative bg-bm-amber px-6 py-4 hover:text-bm-oxford transition-ease"
+									onclick="toggleActive(1)">
+									Personal
+									<div
+										class="absolute -bottom-[10px] left-1/2 -translate-1/2"></div>
+								</div>
+
+								<div
+									class="filter relative bg-bm-amber px-6 py-4 rounded-r-md hover:text-bm-oxford transition-ease"
+									onclick="toggleActive(2)">
+									Professional
+									<div
+										class="absolute -bottom-[10px] left-1/2 -translate-1/2"></div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="portfolio-content columns-1 space-y-6 max-w-sm mx-auto md:columns-3xs md:max-w-2xl md:gap-4 lg:columns-3 lg:max-w-5xl lg:gap-6">
+							<article
+								class="group rounded-md overflow-hidden h-96">
+								<img
+									class="object-cover h-96 w-full grayscale-[50%] transition-ease group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+							</article>
+
+							<article
+								class="group rounded-md overflow-hidden h-56">
+								<img
+									class="object-cover h-56 w-full grayscale-[50%] transition-ease group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+							</article>
+
+							<article
+								class="group rounded-md overflow-hidden h-72">
+								<img
+									class="object-cover h-72 w-full grayscale-[50%] transition-ease group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+							</article>
+
+							<article
+								class="group rounded-md overflow-hidden h-32">
+								<img
+									class="object-cover h-32 w-full grayscale-[50%] transition-ease group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+							</article>
+
+							<article
+								class="group rounded-md overflow-hidden h-80">
+								<img
+									class="object-cover h-80 w-full grayscale-[50%] transition-ease group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+							</article>
+
+							<article
+								class="group rounded-md overflow-hidden h-44">
+								<img
+									class="object-cover h-44 w-full grayscale-[50%] transition-ease group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+							</article>
+						</div>
+
+						<a
+							href="#contact"
+							class="portfolio-btn mt-16 w-fit mx-auto group flex items-center border border-bm-amber bg-transparent rounded text-bm-amber px-4 py-2 font-semibold text-base shadow-lg transition-ease hover:bg-bm-gold hover:text-bm-federal">
+							More Projects
+
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								class="w-5 h-5 group-hover:animate-bounce-r">
+								<path
+									fill-rule="evenodd"
+									d="M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd" />
+								<path
+									fill-rule="evenodd"
+									d="M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Portfolio Ends -->
+
+		<!-- Skills Start -->
+		<section id="skills" class="bg-bm-oxford min-h-screen pt-32 pb-16">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-8">
+						<div class="mb-16 space-y-4 max-w-lg">
+							<h2 class="skills-1 text-3xl font-bold sm:text-4xl">
+								What I'm Best At
+							</h2>
+							<p class="skills-2 italic">
+								Illustrations of my skills as Fullstack
+								Developer
+							</p>
+						</div>
+
+						<div
+							class="flex mx-auto max-w-sm md:max-w-md lg:max-w-3xl">
+							<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+								<div class="flex flex-wrap">
+									<div class="mb-2 text-xl">
+										HTML/CSS/Javascript
+									</div>
+									<div class="flex items-center">
+										<div
+											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											<div
+												class="gauge-1 w-[288px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+										</div>
+										<div class="text-xl">98%</div>
+									</div>
+								</div>
+
+								<div class="flex flex-wrap">
+									<div class="mb-2 text-xl">
+										Boostrap/Tailwind
+									</div>
+									<div class="flex items-center">
+										<div
+											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											<div
+												class="gauge-2 w-[282px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+										</div>
+										<div class="text-xl">97%</div>
+									</div>
+								</div>
+
+								<div class="flex flex-wrap">
+									<div class="mb-2 text-xl">
+										JQuery/Vue JS
+									</div>
+									<div class="flex items-center">
+										<div
+											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											<div
+												class="gauge-3 w-[258px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+										</div>
+										<div class="text-xl">93%</div>
+									</div>
+								</div>
+
+								<div class="flex flex-wrap">
+									<div class="mb-2 text-xl">
+										Mobile First Responsive Design
+									</div>
+									<div class="flex items-center">
+										<div
+											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											<div
+												class="gauge-4 w-[270px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+										</div>
+										<div class="text-xl">95%</div>
+									</div>
+								</div>
+
+								<div class="flex flex-wrap">
+									<div class="mb-2 text-xl">
+										PHP/MySQL/Laravel
+									</div>
+									<div class="flex items-center">
+										<div
+											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											<div
+												class="gauge-5 w-[270px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+										</div>
+										<div class="text-xl">95%</div>
+									</div>
+								</div>
+
+								<div class="flex flex-wrap">
+									<div class="mb-2 text-xl">
+										Photoshop/Figma
+									</div>
+									<div class="flex items-center">
+										<div
+											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											<div
+												class="gauge-6 w-[258px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+										</div>
+										<div class="text-xl">93%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<a
+							href="#profile"
+							class="skills-btn mt-16 w-fit mx-auto group flex items-center border border-bm-amber bg-transparent rounded text-bm-amber px-4 py-2 font-semibold text-base shadow-lg transition-ease hover:bg-bm-gold hover:text-bm-federal">
+							View Profile
+
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								class="w-5 h-5 group-hover:animate-bounce-r">
+								<path
+									fill-rule="evenodd"
+									d="M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd" />
+								<path
+									fill-rule="evenodd"
+									d="M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Skills Ends -->
+
+		<!-- Blog Start -->
+		<section id="blog" class="bg-bm-federal min-h-max py-32">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-8">
+						<div
+							class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+							<div
+								class="blog-image relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+								<img
+									alt="Party"
+									src="assets/img/blog-header.jpg"
+									class="absolute inset-0 h-full w-full object-cover" />
+							</div>
+
+							<div class="lg:py-24">
+								<h2 class="blog-1 text-3xl font-bold sm:text-4xl">
+									Latest entry
+								</h2>
+
+								<p class="blog-2 mt-4 italic">
+									Read through some of my own thoughts around programming world in general and specifically on web/android development, and some, may a little bit touch on my personal life.
+								</p>
+
+								<a
+									href="#contact"
+									class="blog-3 mt-16 w-fit group flex items-center border border-bm-amber bg-transparent rounded text-bm-amber px-4 py-2 font-semibold text-base shadow-lg transition-ease hover:bg-bm-gold hover:text-bm-federal">
+									Read More
+
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										class="w-5 h-5 group-hover:animate-bounce-r">
+										<path
+											fill-rule="evenodd"
+											d="M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+											clip-rule="evenodd" />
+										<path
+											fill-rule="evenodd"
+											d="M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+											clip-rule="evenodd" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Blog Ends -->
+
+		<!-- Contact Start -->
+		<section id="contact" class="bg-bm-oxford min-h-screen pt-32 pb-16">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-8">
+						<div
+							class="flex mx-auto max-w-md md:max-w-xl lg:max-w-3xl">
+							<h2
+								class="contact-1 mb-8 self-center text-3xl font-bold sm:text-4xl">
+								Let's get in touch!
+							</h2>
+
+							<div></div>
+						</div>
+
+						<div
+							class="mt-4 max-w-md mx-auto rounded-md border-2 border-dashed border-bm-amber p-8 md:max-w-xl lg:max-w-3xl">
+							<div class="mb-16 space-y-4">
+								<p class="contact-2">
+									I'm currently available for freelance
+									projects or full-time work.
+								</p>
+								<p class="contact-3">
+									If you're interested in working with me,
+									please fill in the form below. I'll be
+									delighted to hear from you. Or feel free to
+									just say hi. Let's be friends!
+								</p>
+							</div>
+
+							<div class="grid grid-cols-1 gap-6">
+								<label class="contact-form-1 block">
+									<span class="text-bm-flash">Full name</span>
+									<input
+										type="text"
+										class="mt-1 block w-full rounded-md shadow-sm bg-bm-platinum text-bm-oxford focus:ring-2 focus:ring-bm-gold"
+										placeholder="" />
+								</label>
+								<label class="contact-form-2 block">
+									<span class="text-bm-flash"
+										>Email address</span
+									>
+									<input
+										type="email"
+										class="mt-1 block w-full rounded-md shadow-sm bg-bm-platinum text-bm-oxford focus:ring-2 focus:ring-bm-gold"
+										placeholder="john@example.com" />
+								</label>
+								<label class="contact-form-3 block">
+									<span class="text-bm-flash"
+										>When is your event?</span
+									>
+									<input
+										type="date"
+										class="mt-1 block w-full rounded-md shadow-sm bg-bm-platinum text-bm-oxford focus:ring-2 focus:ring-bm-gold" />
+								</label>
+								<label class="contact-form-4 block">
+									<span class="text-bm-flash"
+										>What type of event is it?</span
+									>
+									<select
+										class="block w-full mt-1 rounded-md shadow-sm bg-bm-platinum text-bm-oxford focus:ring-2 focus:ring-bm-gold">
+										<option>Corporate event</option>
+										<option>Wedding</option>
+										<option>Birthday</option>
+										<option>Other</option>
+									</select>
+								</label>
+								<label class="contact-form-5 block">
+									<span class="text-bm-flash"
+										>Additional details</span
+									>
+									<textarea
+										class="mt-1 block w-full rounded-md shadow-sm bg-bm-platinum text-bm-oxford focus:ring-2 focus:ring-bm-gold"
+										rows="3"></textarea>
+								</label>
+								<div class="contact-form-6 block">
+									<div class="mt-2">
+										<div>
+											<label
+												class="inline-flex items-center">
+												<input
+													type="checkbox"
+													class="rounded text-bm-gold shadow-sm bg-bm-platinum focus:ring-2 focus:ring-offset-0 focus:ring-bm-amber"
+													checked="" />
+												<span class="ml-2"
+													>Email me news and special
+													offers</span
+												>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<a
+								href="#contact"
+								class="contact-form-7 mt-16 w-fit mx-auto group flex items-center border border-bm-amber bg-transparent rounded text-bm-amber px-4 py-2 font-semibold text-base shadow-lg transition-ease hover:bg-bm-gold hover:text-bm-federal">
+								Send Message
+
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="w-5 h-5 group-hover:animate-bounce-r">
+									<path
+										fill-rule="evenodd"
+										d="M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+										clip-rule="evenodd" />
+									<path
+										fill-rule="evenodd"
+										d="M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+										clip-rule="evenodd" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Ends -->
+
+		<!-- Footer Start -->
+		<footer
+			class="bg-gradient-to-b from-bm-amber to-bm-gold text-bm-oxford min-h-[300px] pt-16 pb-12">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-4">
+						<div
+							class="flex flex-wrap items-start max-w-sm mx-auto space-y-4 md:space-y-0 md:max-w-2xl md:flex-nowrap lg:max-w-full">
+							<div class="footer-logo w-fit mb-8 md:w-96">
+								<a
+									href="/"
+									class="flex items-center space-x-1 w-44">
+									<img
+										class="w-12 h-12"
+										src="assets/img/indras-logo-federal.svg"
+										alt="Portos Logo" />
+
+									<div
+										class="flex flex-wrap items-center w-full">
+										<div
+											class="text-lg font-bold uppercase text-bm-flash leading-none">
+											work
+										</div>
+										<div
+											class="text-[11px] text-bm-federal leading-none">
+											dev workshop
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div
+								class="flex flex-wrap lg:flex-nowrap lg:space-x-6">
+								<div class="footer-menu-1 flex flex-wrap mb-6">
+									<div
+										class="font-semibold w-full text-xl mb-2">
+										Portfolio
+									</div>
+									<div class="ml-4 flex flex-col text-sm">
+										<a class="mb-2">W3Schools</a>
+										<a class="mb-2">Self Hosted</a>
+										<a class="mb-2">Github</a>
+										<a class="mb-2">W3Schools</a>
+									</div>
+								</div>
+
+								<div class="footer-menu-2 flex flex-wrap mb-6">
+									<div
+										class="font-semibold w-full text-xl mb-2">
+										Portfolio
+									</div>
+									<div class="ml-4 flex flex-col text-sm">
+										<a class="mb-2">W3Schools</a>
+										<a class="mb-2">Self Hosted</a>
+										<a class="mb-2">Github</a>
+										<a class="mb-2">W3Schools</a>
+									</div>
+								</div>
+
+								<div class="footer-menu-3 flex flex-wrap mb-6">
+									<div
+										class="font-semibold w-full text-xl mb-2">
+										Portfolio
+									</div>
+									<div class="ml-4 flex flex-col text-sm">
+										<a class="mb-2">W3Schools</a>
+										<a class="mb-2">Self Hosted</a>
+										<a class="mb-2">Github</a>
+										<a class="mb-2">W3Schools</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer Ends -->
+
+		<!-- Copyright Start -->
+		<div
+			class="bg-bm-gold text-bm-oxford min-h-fit py-4 border-t border-dashed border-bm-flax">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex justify-between text-sm text-bm-platinum px-6">
+					<div class="copy-l self-center">
+						&copy; 2023 IndrasWork. Designed &amp; Built by Indras.
+					</div>
+
+					<div class="copy-r hidden lg:block">Tech: HTML, Tailwind, Laravel, Vue, Inertia</div>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright Ends -->
+
+		<!-- Back to Top Start -->
+		<div id="back-to-top" class="hidden relative">
+			<a
+				href="#hero"
+				class="fixed bottom-4 right-4 animate-pulse text-bm-platinum transition-ease hover:text-gray-400">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-12 h-12">
+					<path
+						fill-rule="evenodd"
+						d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z"
+						clip-rule="evenodd" />
+				</svg>
+			</a>
+		</div>
+		<!-- Back to Top Ends -->
+	</body>
+</html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap"
+			rel="stylesheet" />
+
+		<link href="assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Header Start -->
+		<header
+			class="bg-transparent w-full top-0 left-0 absolute flex items-center z-10">
+			<div class="w-[1280px] mx-auto">
+				<div class="flex items-center justify-between relative py-2">
+					<div class="w-fit px-4">
+						<a href="./index.html" class="flex items-center md:w-44">
+							<img
+								class="w-12 h-12 mr-1"
+								src="assets/img/indras-logo-amber.svg"
+								alt="Portos Logo" />
+
+							<div
+								class="hidden md:flex md:flex-wrap md:items-center md:w-full">
+								<div
+									class="md:text-lg md:font-bold md:uppercase text-bm-amber leading-none">
+									work
+								</div>
+								<div
+									class="md:text-[11px] md:text-bm-flash leading-none">
+									dev workshop
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="flex items-center px-4">
+						<button
+							id="toggle-menu"
+							class="lg:hidden space-y-2 block absolute right-4">
+							<span
+								class="burger origin-top-right transition duration-300 ease-in-out"></span>
+							<span
+								class="burger-short transition duration-300 ease-in-out"></span>
+							<span
+								class="burger origin-bottom-right transition duration-300 ease-in-out"></span>
+						</button>
+
+						<nav
+							id="full-menu"
+							class="hidden absolute px-6 py-4 bg-bm-amber text-bm-oxford font-semibold text-base shadow-lg rounded-lg max-w-[230px] w-full right-4 top-full lg:bg-none lg:text-bm-flash lg:flex lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+							<ul class="block lg:flex">
+								<li
+									class="mb-2 px-4 py-2 transition duration-300 ease-in-out lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a href="#about">About Me</a>
+								</li>
+								<li
+									class="mb-2 px-4 py-2 transition duration-300 ease-in-out lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a href="#portfolio">Portfolio</a>
+								</li>
+								<li
+									class="mb-2 px-4 py-2 transition duration-300 ease-in-out lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a href="#skills">Skills</a>
+								</li>
+								<li
+									class="mb-2 px-4 py-2 transition duration-300 ease-in-out lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a href="./blog.html">Blog</a>
+								</li>
+								<li
+									class="group mb-2 px-4 py-2 transition duration-300 ease-in-out lg:hover:text-bm-amber hover:text-bm-flash hover:bg-bm-federal rounded-md hover:shadow-sm w-fit">
+									<a class="flex" href="#contact">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 24 24"
+											fill="currentColor"
+											class="hidden w-6 h-6 text-bm-amber lg:block group-hover:animate-bounce-l">
+											<path
+												fill-rule="evenodd"
+												d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
+												clip-rule="evenodd" />
+										</svg>
+
+										Contact Me
+
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 24 24"
+											fill="currentColor"
+											class="hidden w-6 h-6 text-bm-amber lg:block group-hover:animate-bounce-r">
+											<path
+												fill-rule="evenodd"
+												d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+												clip-rule="evenodd" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Ends -->
+
+		<!-- Blog Start -->
+		<section id="blog" class="bg-bm-oxford min-h-screen pt-32 pb-16">
+			<div class="max-w-7xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-8">
+						<div class="mb-16 space-y-4 max-w-lg">
+							<h2 class="text-3xl font-semibold">Blog</h2>
+							<p>
+								My thoughts on web development and a look at my
+								personal life.
+							</p>
+						</div>
+
+						<div
+							class="grid grid-cols-1 space-y-8 max-w-sm mx-auto md:grid-cols-2 md:space-y-0 md:max-w-2xl md:gap-4 lg:grid-cols-3 lg:max-w-5xl lg:gap-6">
+							<article class="group rounded-md overflow-hidden">
+								<img
+									class="object-cover h-56 w-full grayscale-[50%] transition duration-300 ease-in-out group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+
+								<div
+									class="flex flex-col bg-bm-flash text-bm-oxford p-6 space-y-4">
+									<header>
+										<div
+											class="flex space-x-2 uppercase text-xs">
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>abcdef</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>qwerty</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>asdfghijk</a
+											>
+										</div>
+									</header>
+
+									<h2 class="text-xl">
+										<a href=""
+											>Lorem ipsum dolor sit amet
+											consectetur, adipisicing elit.</a
+										>
+									</h2>
+									<div>
+										<p
+											class="leading-normal text-gray-500 text-sm mb-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Atque
+											eaque fuga quos quia sequi accusamus...
+										</p>
+
+										<a
+											class="flex items-center text-sm text-gray-500 mb-4 transition duration-300 ease-in-out hover:text-bm-oxford"
+											href="">
+											Continue
+
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 20 20"
+												fill="currentColor"
+												class="w-5 h-5">
+												<path
+													fill-rule="evenodd"
+													d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+													clip-rule="evenodd" />
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex items-center space-x-4 text-sm">
+										<a href="/user/username">
+											<img
+												class="w-12 h-12 rounded-full"
+												src="assets/img/user.jpg"
+												alt="User avatar" />
+										</a>
+										<div
+											class="flex flex-col text-gray-500">
+											<div>
+												<a href="/user/username"
+													>Indra Santoso</a
+												>
+											</div>
+											<div class="flex">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="w-5 h-5">
+													<path
+														d="M5.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H6a.75.75 0 01-.75-.75V12zM6 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H6zM7.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H8a.75.75 0 01-.75-.75V12zM8 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H8zM9.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V10zM10 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H10zM9.25 14a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V14zM12 9.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V10a.75.75 0 00-.75-.75H12zM11.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75V12zM12 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H12zM13.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H14a.75.75 0 01-.75-.75V10zM14 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H14z" />
+													<path
+														fill-rule="evenodd"
+														d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z"
+														clip-rule="evenodd" />
+												</svg>
+
+												<time datetime=""
+													>Feb 20th 2023</time
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<article class="group rounded-md overflow-hidden">
+								<img
+									class="object-cover h-56 w-full grayscale-[50%] transition duration-300 ease-in-out group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+
+								<div
+									class="flex flex-col bg-bm-flash text-bm-oxford p-6 space-y-4">
+									<header>
+										<div
+											class="flex space-x-2 uppercase text-xs">
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>abcdef</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>qwerty</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>asdfghijk</a
+											>
+										</div>
+									</header>
+
+									<h2 class="text-xl">
+										<a href=""
+											>Lorem ipsum dolor sit amet
+											consectetur, adipisicing elit.</a
+										>
+									</h2>
+									<div>
+										<p
+											class="leading-normal text-gray-500 text-sm mb-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Atque
+											eaque fuga quos quia...
+										</p>
+
+										<a
+											class="flex items-center text-sm text-gray-500 mb-4 transition duration-300 ease-in-out hover:text-bm-oxford"
+											href="">
+											Continue
+
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 20 20"
+												fill="currentColor"
+												class="w-5 h-5">
+												<path
+													fill-rule="evenodd"
+													d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+													clip-rule="evenodd" />
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex items-center space-x-4 text-sm">
+										<a href="/user/username">
+											<img
+												class="w-12 h-12 rounded-full"
+												src="assets/img/user.jpg"
+												alt="User avatar" />
+										</a>
+										<div
+											class="flex flex-col text-gray-500">
+											<div>
+												<a href="/user/username"
+													>Indra Santoso</a
+												>
+											</div>
+											<div class="flex">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="w-5 h-5">
+													<path
+														d="M5.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H6a.75.75 0 01-.75-.75V12zM6 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H6zM7.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H8a.75.75 0 01-.75-.75V12zM8 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H8zM9.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V10zM10 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H10zM9.25 14a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V14zM12 9.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V10a.75.75 0 00-.75-.75H12zM11.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75V12zM12 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H12zM13.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H14a.75.75 0 01-.75-.75V10zM14 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H14z" />
+													<path
+														fill-rule="evenodd"
+														d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z"
+														clip-rule="evenodd" />
+												</svg>
+
+												<time datetime=""
+													>Feb 20th 2023</time
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<article class="group rounded-md overflow-hidden">
+								<img
+									class="object-cover h-56 w-full grayscale-[50%] transition duration-300 ease-in-out group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+
+								<div
+									class="flex flex-col bg-bm-flash text-bm-oxford p-6 space-y-4">
+									<header>
+										<div
+											class="flex space-x-2 uppercase text-xs">
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>abcdef</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>qwerty</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>asdfghijk</a
+											>
+										</div>
+									</header>
+
+									<h2 class="text-xl">
+										<a href=""
+											>Lorem ipsum dolor sit amet
+											consectetur, adipisicing elit.</a
+										>
+									</h2>
+									<div>
+										<p
+											class="leading-normal text-gray-500 text-sm mb-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Atque
+											eaque fuga quos quia sequi...
+										</p>
+
+										<a
+											class="flex items-center text-sm text-gray-500 mb-4 transition duration-300 ease-in-out hover:text-bm-oxford"
+											href="">
+											Continue
+
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 20 20"
+												fill="currentColor"
+												class="w-5 h-5">
+												<path
+													fill-rule="evenodd"
+													d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+													clip-rule="evenodd" />
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex items-center space-x-4 text-sm">
+										<a href="/user/username">
+											<img
+												class="w-12 h-12 rounded-full"
+												src="assets/img/user.jpg"
+												alt="User avatar" />
+										</a>
+										<div
+											class="flex flex-col text-gray-500">
+											<div>
+												<a href="/user/username"
+													>Indra Santoso</a
+												>
+											</div>
+											<div class="flex">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="w-5 h-5">
+													<path
+														d="M5.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H6a.75.75 0 01-.75-.75V12zM6 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H6zM7.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H8a.75.75 0 01-.75-.75V12zM8 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H8zM9.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V10zM10 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H10zM9.25 14a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V14zM12 9.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V10a.75.75 0 00-.75-.75H12zM11.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75V12zM12 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H12zM13.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H14a.75.75 0 01-.75-.75V10zM14 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H14z" />
+													<path
+														fill-rule="evenodd"
+														d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z"
+														clip-rule="evenodd" />
+												</svg>
+
+												<time datetime=""
+													>Feb 20th 2023</time
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<article class="group rounded-md overflow-hidden">
+								<img
+									class="object-cover h-56 w-full grayscale-[50%] transition duration-300 ease-in-out group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+
+								<div
+									class="flex flex-col bg-bm-flash text-bm-oxford p-6 space-y-4">
+									<header>
+										<div
+											class="flex space-x-2 uppercase text-xs">
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>abcdef</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>qwerty</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>asdfghijk</a
+											>
+										</div>
+									</header>
+
+									<h2 class="text-xl">
+										<a href=""
+											>Lorem ipsum dolor sit amet
+											consectetur, adipisicing elit.</a
+										>
+									</h2>
+									<div>
+										<p
+											class="leading-normal text-gray-500 text-sm mb-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Atque
+											eaque fuga quos quia sequi accusamus
+											corrupti...
+										</p>
+
+										<a
+											class="flex items-center text-sm text-gray-500 mb-4 transition duration-300 ease-in-out hover:text-bm-oxford"
+											href="">
+											Continue
+
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 20 20"
+												fill="currentColor"
+												class="w-5 h-5">
+												<path
+													fill-rule="evenodd"
+													d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+													clip-rule="evenodd" />
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex items-center space-x-4 text-sm">
+										<a href="/user/username">
+											<img
+												class="w-12 h-12 rounded-full"
+												src="assets/img/user.jpg"
+												alt="User avatar" />
+										</a>
+										<div
+											class="flex flex-col text-gray-500">
+											<div>
+												<a href="/user/username"
+													>Indra Santoso</a
+												>
+											</div>
+											<div class="flex">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="w-5 h-5">
+													<path
+														d="M5.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H6a.75.75 0 01-.75-.75V12zM6 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H6zM7.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H8a.75.75 0 01-.75-.75V12zM8 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H8zM9.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V10zM10 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H10zM9.25 14a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V14zM12 9.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V10a.75.75 0 00-.75-.75H12zM11.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75V12zM12 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H12zM13.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H14a.75.75 0 01-.75-.75V10zM14 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H14z" />
+													<path
+														fill-rule="evenodd"
+														d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z"
+														clip-rule="evenodd" />
+												</svg>
+
+												<time datetime=""
+													>Feb 20th 2023</time
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<article class="group rounded-md overflow-hidden">
+								<img
+									class="object-cover h-56 w-full grayscale-[50%] transition duration-300 ease-in-out group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+
+								<div
+									class="flex flex-col bg-bm-flash text-bm-oxford p-6 space-y-4">
+									<header>
+										<div
+											class="flex space-x-2 uppercase text-xs">
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>abcdef</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>qwerty</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>asdfghijk</a
+											>
+										</div>
+									</header>
+
+									<h2 class="text-xl">
+										<a href=""
+											>Lorem ipsum dolor sit amet
+											consectetur, adipisicing elit.</a
+										>
+									</h2>
+									<div>
+										<p
+											class="leading-normal text-gray-500 text-sm mb-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Atque
+											eaque quia quia quia...
+										</p>
+
+										<a
+											class="flex items-center text-sm text-gray-500 mb-4 transition duration-300 ease-in-out hover:text-bm-oxford"
+											href="">
+											Continue
+
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 20 20"
+												fill="currentColor"
+												class="w-5 h-5">
+												<path
+													fill-rule="evenodd"
+													d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+													clip-rule="evenodd" />
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex items-center space-x-4 text-sm">
+										<a href="/user/username">
+											<img
+												class="w-12 h-12 rounded-full"
+												src="assets/img/user.jpg"
+												alt="User avatar" />
+										</a>
+										<div
+											class="flex flex-col text-gray-500">
+											<div>
+												<a href="/user/username"
+													>Indra Santoso</a
+												>
+											</div>
+											<div class="flex">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="w-5 h-5">
+													<path
+														d="M5.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H6a.75.75 0 01-.75-.75V12zM6 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H6zM7.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H8a.75.75 0 01-.75-.75V12zM8 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H8zM9.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V10zM10 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H10zM9.25 14a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V14zM12 9.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V10a.75.75 0 00-.75-.75H12zM11.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75V12zM12 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H12zM13.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H14a.75.75 0 01-.75-.75V10zM14 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H14z" />
+													<path
+														fill-rule="evenodd"
+														d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z"
+														clip-rule="evenodd" />
+												</svg>
+
+												<time datetime=""
+													>Feb 20th 2023</time
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<article class="group rounded-md overflow-hidden">
+								<img
+									class="object-cover h-56 w-full grayscale-[50%] transition duration-300 ease-in-out group-hover:grayscale-0"
+									src="assets/img/user.jpg" />
+
+								<div
+									class="flex flex-col bg-bm-flash text-bm-oxford p-6 space-y-4">
+									<header>
+										<div
+											class="flex space-x-2 uppercase text-xs">
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>abcdef</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>qwerty</a
+											>
+											<a
+												href=""
+												class="whitespace-nowrap rounded-full bg-gray-300 text-bm-oxford py-px px-1 transition duration-300 ease-in-out hover:bg-bm-amber"
+												>asdfghijk</a
+											>
+										</div>
+									</header>
+
+									<h2 class="text-xl">
+										<a href=""
+											>Lorem ipsum dolor sit amet
+											consectetur, adipisicing elit.</a
+										>
+									</h2>
+									<div>
+										<p
+											class="leading-normal text-gray-500 text-sm mb-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Atque quia quia quia quia quia...
+										</p>
+
+										<a
+											class="flex items-center text-sm text-gray-500 mb-4 transition duration-300 ease-in-out hover:text-bm-oxford"
+											href="">
+											Continue
+
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 20 20"
+												fill="currentColor"
+												class="w-5 h-5">
+												<path
+													fill-rule="evenodd"
+													d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+													clip-rule="evenodd" />
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex items-center space-x-4 text-sm">
+										<a href="/user/username">
+											<img
+												class="w-12 h-12 rounded-full"
+												src="assets/img/user.jpg"
+												alt="User avatar" />
+										</a>
+										<div
+											class="flex flex-col text-gray-500">
+											<div>
+												<a href="/user/username"
+													>Indra Santoso</a
+												>
+											</div>
+											<div class="flex">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="w-5 h-5">
+													<path
+														d="M5.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H6a.75.75 0 01-.75-.75V12zM6 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H6zM7.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H8a.75.75 0 01-.75-.75V12zM8 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H8zM9.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V10zM10 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H10zM9.25 14a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V14zM12 9.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V10a.75.75 0 00-.75-.75H12zM11.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75V12zM12 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H12zM13.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H14a.75.75 0 01-.75-.75V10zM14 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H14z" />
+													<path
+														fill-rule="evenodd"
+														d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z"
+														clip-rule="evenodd" />
+												</svg>
+
+												<time datetime=""
+													>Feb 20th 2023</time
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<button
+							class="group mt-16 flex items-center mx-auto bg-bm-amber text-bm-oxford px-4 py-2 rounded-md shadow-sm font-semibold hover:bg-bm-gold">
+							More Entries
+
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								class="w-5 h-5 group-hover:animate-bounce-r">
+								<path
+									fill-rule="evenodd"
+									d="M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd" />
+								<path
+									fill-rule="evenodd"
+									d="M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Blog Ends -->
+
+		<!-- Footer Start -->
+		<footer
+			class="bg-gradient-to-b from-bm-amber to-bm-gold text-bm-oxford min-h-[300px] pt-16 pb-12">
+			<div class="max-w-7xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-4">
+						<div
+							class="flex flex-wrap items-start max-w-sm mx-auto space-y-4 md:space-y-0 md:max-w-2xl md:flex-nowrap lg:max-w-full">
+							<div class="w-fit md:w-96">
+								<a
+									href="/"
+									class="flex items-center space-x-1 w-44">
+									<img
+										class="w-12 h-12"
+										src="assets/img/indras-logo-federal.svg"
+										alt="Portos Logo" />
+
+									<div
+										class="flex flex-wrap items-center w-full">
+										<div
+											class="text-lg font-bold uppercase text-bm-flash leading-none">
+											work
+										</div>
+										<div
+											class="text-[11px] text-bm-federal leading-none">
+											dev workshop
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div
+								class="flex flex-wrap lg:flex-nowrap lg:space-x-6">
+								<div class="flex flex-wrap mb-6">
+									<div
+										class="font-semibold uppercase w-full text-xl mb-2">
+										Portfolio
+									</div>
+									<div class="ml-4 flex flex-col text-sm">
+										<a class="">W3Schools</a>
+										<a class="">Self Hosted</a>
+										<a class="">Github</a>
+										<a class="">W3Schools</a>
+									</div>
+								</div>
+
+								<div class="flex flex-wrap mb-6">
+									<div
+										class="font-semibold uppercase w-full text-xl mb-2">
+										Portfolio
+									</div>
+									<div class="ml-4 flex flex-col text-sm">
+										<a class="">W3Schools</a>
+										<a class="">Self Hosted</a>
+										<a class="">Github</a>
+										<a class="">W3Schools</a>
+									</div>
+								</div>
+
+								<div class="flex flex-wrap mb-6">
+									<div
+										class="font-semibold uppercase w-full text-xl mb-2">
+										Portfolio
+									</div>
+									<div class="ml-4 flex flex-col text-sm">
+										<a class="">W3Schools</a>
+										<a class="">Self Hosted</a>
+										<a class="">Github</a>
+										<a class="">W3Schools</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer Ends -->
+
+		<!-- Copyright Start -->
+		<div
+			class="bg-bm-gold text-bm-oxford min-h-fit py-4 border-t border-dashed border-bm-flax">
+			<div class="max-w-7xl mx-auto">
+				<div class="flex flex-wrap">
+					<div class="w-full self-center px-4">
+						&copy; 2023 IndrasWork. All rights reserved.
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright Ends -->
+
+		<!-- Back to Top Start -->
+		<div id="back-to-top" class="hidden relative">
+			<a
+				href="#hero"
+				class="fixed bottom-4 right-4 animate-pulse text-bm-platinum hover:text-bm-gold">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-12 h-12">
+					<path
+						fill-rule="evenodd"
+						d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z"
+						clip-rule="evenodd" />
+				</svg>
+			</a>
+		</div>
+		<!-- Back to Top Ends -->
+
+		<!-- JS -->
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
