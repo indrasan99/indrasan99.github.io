@@ -1,5 +1,81 @@
 {
-    "en_US": {
-        "title": "Hello World"
-    }
-}
+    "navbar": {
+        "about": "About Me",
+        "portfolio": "Portfolio",
+        "skills": "Skills",
+        "blog": "Blog",
+        "contact": "Contact Me"
+      },
+      "hero": {
+        "hello": "Hello",
+        "name": "I'm Indras",
+        "tagline": "I build awesome websites for people",
+        "intro": "I'm a \"Super\" Dev... a Fullstack Web Developer that could handle both sides of the force, front-end and back-end.",
+        "ask": "Need help with a project? Let's work together.",
+        "btn": "Contact Me"
+      },
+      "trophy": {
+        "title": "The journey has just begun",
+        "box1": "0 Years Experience",
+        "box2": "0 Projects",
+        "box3": "0 Happy Customers"
+      },
+      "about": {
+        "title": "A few words about me",
+        "intro": "Hey there, my name is Indras, a web developer from Jakarta, Indonesia.",
+        "intro2": "My mission is to help small businesses get noticed with their AWESOME online presence.",
+        "intro3": "Currently, my main focus is on the front-end using HTML, Tailwind, PHP, Laravel, Vue, & Inertia.",
+        "connect": "Get connected!",
+        "title2": "What I can Do",
+        "intro4": "I'm here to help you get that awesome online presence that you've always wanted.",
+        "intro5": "I can help you put together your amazing photos and articles either by following your own design or I could arrange them for you. Turning them into a completely outstanding website that you can be proud of. Thus, boosting your business to the next level.",
+        "intro6": "But, most importantly, I want to give you my absolutely best services at the best price. So don't hesitate to contact me to get a price tailored to your specific needs and budget.",
+        "btn": "Contact Me"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "intro": "Here's a collection of my work ranging from personal, client projects to other professional work.",
+        "filter1": "All Projects",
+        "filter2": "Personal",
+        "filter3": "Professional",
+        "btn": "More projects"
+      },
+      "skills": {
+        "title": "What I'm Best At",
+        "intro": "Illustrations of my skills as Fullstack Developer",
+        "btn": "View profile"
+      },
+      "blog": {
+        "title": "Latest entry",
+        "intro": "Read through some of my own thoughts around programming world in general and specifically on web/android development, and some, may a little bit touch on my personal life.",
+        "btn": "Read more"
+      },
+      "contact": {
+        "title": "Let's get in touch",
+        "intro": "I'm currently available for freelance projects or full-time work.",
+        "intro2": "If you're interested in working with me, please fill in the form below. I'll be delighted to hear from you. Or feel free to just say hi. Let's be friends!",
+        "form1": "First Name",
+        "form2": "Last Name",
+        "form3": "Email Address",
+        "form4": "Your Message",
+        "btn": "Send Message"
+      },
+      "footer": {
+        "title1": "Portfolio",
+        "title2": "Services",
+        "title3": "More",
+        "item1": "Github",
+        "item2": "LinkedIn",
+        "item3": "W3Schools",
+        "item4": "Blog",
+        "item5": "PSD to HTML",
+        "item6": "PSD to Wordpress",
+        "item7": "Laravel App",
+        "item8": "Android App",
+        "item11": "Fiverr",
+        "item12": "Upwork",
+        "item13": "Projects.co.id",
+        "copy": "Copyright 2023 IndrasWork. Designed & Built by Indras",
+        "tech": "Tech: HTML dan Tailwind"
+      }
+  }

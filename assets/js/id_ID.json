@@ -1,5 +1,82 @@
 {
-    "id_ID": {
-        "title": "Halo Dunia"
-    }
-}
+    "navbar": {
+        "about": "Tentang Saya",
+        "portfolio": "Portfolio",
+        "skills": "Keahlian",
+        "blog": "Blog",
+        "contact": "Hubungi Saya"
+      },
+      "hero": {
+        "hello": "Halo",
+        "name": "Saya Indras",
+        "tagline": "Saya membuat website keren untuk khalayak",
+        "intro": "Saya seorang Pengembang \"Super\"... seorang Pengembang Web Fullstack yang dapat menangani kedua sisi kekuatan, front-end dan back-end. ",
+        "ask": "Butuh bantuan dengan projek Anda? Ayo kita bekerjasama.",
+        "btn": "Hubungi Saya"
+      },
+      "trophy": {
+        "title": "Perjalanan baru saja dimulai",
+        "box1": "0 Tahun Pengalaman",
+        "box2": "0 Projek",
+        "box3": "0 Pelanggan Puas"
+      },
+      "about": {
+        "title": "Sepatah kata tentang saya",
+        "intro": "Halo, nama saya Indras, web developer dari Bogor, Jawa Barat, Indonesia.",
+        "intro2": "Misi saya adalah membantu bisnis kecil mendapatkan perhatian dengan kehadiran online mereka yang KEREN.",
+        "intro3": "Saat ini, fokus utama saya adalah front-end menggunakan HTML, Tailwind, PHP, Laravel, Vue, & Inertia.",
+        "connect": "Ayo berteman!",
+        "title2": "Apa yang saya BISA",
+        "intro4": "Saya di sini untuk membantu Anda mendapatkan kehadiran online luar biasa yang selalu Anda inginkan.",
+        "intro5": "Saya dapat membantu Anda mengumpulkan foto dan artikel Anda yang luar biasa baik dengan mengikuti desain Anda sendiri atau saya dapat mengaturnya untuk Anda. Mengubahnya menjadi situs web yang benar-benar luar biasa yang dapat Anda banggakan. Dengan demikian, meningkatkan bisnis Anda ke tingkat berikutnya.",
+        "intro6": "Tapi, yang terpenting, saya ingin memberi Anda layanan terbaik saya dengan harga terbaik. Jadi jangan ragu untuk menghubungi saya untuk mendapatkan harga yang disesuaikan dengan kebutuhan spesifik dan anggaran Anda.",
+        "btn": "Hubungi Saya"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "intro": "Berikut kumpulan karya saya mulai dari pribadi, proyek klien hingga karya profesional lainnya.",
+        "filter1": "Semua",
+        "filter2": "Pribadi",
+        "filter3": "Profesional",
+        "btn": "Lebih banyak"
+      },
+      "skills": {
+        "title": "Yang Terbaik dari Saya",
+        "intro": "Ilustrasi keahlian saya sebagai Fullstack Developer",
+        "btn": "Lihat profil"
+      },
+      "blog": {
+        "title": "Artikel terbaru",
+        "intro": "Bacalah beberapa pemikiran saya sendiri seputar dunia pemrograman secara umum dan khususnya tentang pengembangan web/android, dan beberapa, mungkin sedikit menyentuh kehidupan pribadi saya.",
+        "btn": "Lebih banyak"
+      },
+      "contact": {
+        "title": "Kirim pesan",
+        "intro": "Saat ini saya tersedia untuk proyek lepas atau pekerjaan penuh waktu.",
+
+        "intro2": "Jika Anda tertarik untuk bekerja dengan saya, silakan isi formulir di bawah ini. Saya akan senang mendengar dari Anda. Atau jangan ragu untuk sekedar menyapa. Mari berteman!",
+        "form1": "Nama depan",
+        "form2": "Nama belakang",
+        "form3": "Alamat Email",
+        "form4": "Pesan Anda",
+        "btn": "Kirim Pesan"
+      },
+      "footer": {
+        "title1": "Portfolio",
+        "title2": "Layanan",
+        "title3": "Lainnya",
+        "item1": "Github",
+        "item2": "LinkedIn",
+        "item3": "W3Schools",
+        "item4": "Blog",
+        "item5": "PSD to HTML",
+        "item6": "PSD to Wordpress",
+        "item7": "Laravel App",
+        "item8": "Android App",
+        "item11": "Fiverr",
+        "item12": "Upwork",
+        "item13": "Projects.co.id",
+        "copy": "Hak Cipta 2023 IndrasWork. Didesain dan Dibangun oleh Indras",
+        "tech": "Teknologi: HTML dan Tailwind"
+      }
+  }

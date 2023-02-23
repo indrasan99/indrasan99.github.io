@@ -5,7 +5,7 @@ document.onreadystatechange = () => {
         setTimeout(function () {
             loader.classList.add('hidden');
             isLoaded = true;
-        }, 300)
+        }, 300);
 
         if (!isLoaded) {
             // On load & on scroll
@@ -22,7 +22,13 @@ document.onreadystatechange = () => {
                 const blog = document.querySelector('#blog');
                 const contact = document.querySelector('#contact');
                 const footer = document.querySelector('footer');
-                let executed = false
+                let executed = false;
+                let toggleLang = document.querySelector('#lang');
+
+                toggleLang.addEventListener('click', function () {
+                    (toggleLang.checked) ? toggleLang.checked = true : toggleLang.checked = false;
+                    toggleLang.checked ? getLanguageData('id_ID') : getLanguageData('en_US');
+                });
 
                 animateWithDelay('.menu-', false, 6, 'animate-fade-in-down');
                 animateWithDelay('.logo', false, 1, 'animate-fade-in-down');
@@ -130,29 +136,19 @@ document.onreadystatechange = () => {
 };
 
 // Language data
-
-
-let toggleLang = document.querySelector('#lang');
-
-toggleLang.addEventListener('click', function () {
-    console.log(toggleLang);
-    toggleLang.checked ? console.log('checked') : console.log('unchecked');
-    toggleLang.checked ? getLanguageData('en_US') : getLanguageData('id_ID');
-});
 function getLanguageData(langID) {
-    let json = 'assets/js/' + langID +'.json';
+    let json = 'assets/js/' + langID + '.json';
 
-    if (langID === 'id_ID') {
-        fetch(json).then(response => {
-            if (!response.ok) {
-                throw new Error("HTTP Error " + response.status);
-            }
-            return response.json();
-        }).then(response => console.log(JSON.stringify(response))).catch(function () {
-            this.dataError = true;
-        });
-
-    }
+    fetch(langID).then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP Error " + response.status);
+        }
+        return response.json();
+    })
+        .then(response => console.log(JSON.stringify(response)))
+        .catch(function () {
+        this.dataError = true;
+    });
 }
 
 // is Element Visible
