@@ -25,10 +25,13 @@ document.onreadystatechange = () => {
                 let executed = false;
                 let toggleLang = document.querySelector('#lang');
 
-                toggleLang.addEventListener('click', function () {
-                    (toggleLang.checked) ? toggleLang.checked = true : toggleLang.checked = false;
-                    toggleLang.checked ? getLanguageData('id_ID') : getLanguageData('en_US');
-                });
+                // toggleLang.addEventListener('click', function (userData) {
+                //     (toggleLang.checked) ? toggleLang.checked = true : toggleLang.checked = false;
+                //     // toggleLang.checked ? getLanguageData('id_ID') : getLanguageData('en_US');
+                //     getUserData();
+                //     console.log(userData);
+                // });
+
 
                 animateWithDelay('.menu-', false, 6, 'animate-fade-in-down');
                 animateWithDelay('.logo', false, 1, 'animate-fade-in-down');
@@ -117,7 +120,7 @@ document.onreadystatechange = () => {
                         // Contact section
                         if (isElementVisible(contact)) {
                             animateWithDelay('.contact-', false, 3, 'animate-slide-in-down');
-                            animateWithDelay('.contact-form-', false, 7, 'animate-fade-in');
+                            animateWithDelay('.contact-form-', false, 4, 'animate-fade-in');
                         }
 
                         // Footer section
@@ -135,21 +138,26 @@ document.onreadystatechange = () => {
 
 };
 
-// Language data
-function getLanguageData(langID) {
-    let json = 'assets/js/' + langID + '.json';
-
-    fetch(langID).then(response => {
-        if (!response.ok) {
-            throw new Error("HTTP Error " + response.status);
-        }
-        return response.json();
-    })
-        .then(response => console.log(JSON.stringify(response)))
-        .catch(function () {
-        this.dataError = true;
-    });
-}
+// function getUserData() {
+//     fetch("https://randomuser.me/api/", {
+//         method: "GET",
+//         headers: {
+//             "Content-Type": "application/json"
+//         }
+//     })
+//         .then((response) => {
+//             if (!response.ok) {
+//                 throw new Error('Network response was not OK');
+//             }
+//             return response.json();
+//         })
+//         .then((response) => {
+//             console.log(response);
+//         })
+//         .catch((error) => {
+//             console.error('There has been a problem with your fetch operation:', error);
+//     });
+// }
 
 // is Element Visible
 function isElementVisible(el) {
@@ -181,7 +189,6 @@ function animateWithDelay(id, started, count, className) {
     for (i = 1; i < count + 1; i++) {
         let gauge;
         (count === 1) ? gauge = id : gauge = id + i;
-        // console.log(gauge);
 
         let el = document.querySelector(gauge)
         if (!started) {
@@ -217,7 +224,6 @@ window.addEventListener('click', function (e) {
 let filterChildren = document.querySelectorAll('.filter');
 
 function toggleActive(i) {
-    // console.log(filterChildren[i].children[0]);
 
     if (!filterChildren[i].children[0].classList.contains('filter-active')) {
         filterChildren[0].classList.remove('text-bm-oxford');
