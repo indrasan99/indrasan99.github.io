@@ -33,14 +33,14 @@ document.onreadystatechange = () => {
                 // });
 
 
-                animateWithDelay('.menu-', false, 6, 'animate-fade-in-down');
+                animateWithDelay('.menu-', false, 5, 'animate-fade-in-down');
                 animateWithDelay('.logo', false, 1, 'animate-fade-in-down');
 
                 animateWithDelay('.hero-', false, 5, 'animate-slide-in-left');
                 animateWithDelay('.avatar', false, 1, 'animate-slide-in-right');
 
                 // Reset animation
-                animateWithDelay('.menu-', true, 6, 'animate-fade-in-down');
+                animateWithDelay('.menu-', true, 5, 'animate-fade-in-down');
                 animateWithDelay('.logo', true, 1, 'animate-fade-in-down');
                 animateWithDelay('.hero-', true, 5, 'animate-slide-in-left');
                 animateWithDelay('.avatar', true, 1, 'animate-slide-in-right');
@@ -65,7 +65,7 @@ document.onreadystatechange = () => {
 
                         // Header & hero section
                         if (isElementVisible(document.querySelector('#hero'))) {
-                            animateWithDelay('.menu-', false, 6, 'animate-fade-in-down');
+                            animateWithDelay('.menu-', false, 5, 'animate-fade-in-down');
                             animateWithDelay('.logo', false, 1, 'animate-fade-in-down');
 
                             animateWithDelay('.hero-', false, 5, 'animate-slide-in-left');
