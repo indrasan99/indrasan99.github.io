@@ -1,163 +1,127 @@
 document.onreadystatechange = () => {
-    let isLoaded = false;
+    const loader = document.querySelector('#loader');
+    const header = document.querySelector('header');
+    const top = header.offsetTop;
+    const backToTop = document.querySelector('#back-to-top');
+    const clientHeight = document.documentElement.clientHeight;
+    const trophy = document.querySelector('#trophy');
+    const about = document.querySelector('#about');
+    const portfolio = document.querySelector('#portfolio');
+    const skills = document.querySelector('#skills');
+    const blog = document.querySelector('#blog');
+    const contact = document.querySelector('#contact');
+    const footer = document.querySelector('footer');
+    let executed = false;
 
     if (document.readyState === 'complete') {
-        setTimeout(function () {
-            loader.classList.add('hidden');
-            isLoaded = true;
-        }, 300);
+        loader.classList.add('hidden');
 
-        if (!isLoaded) {
-            // On load & on scroll
-            window.onload = function () {
-                const loader = document.querySelector('#loader');
-                const header = document.querySelector('header');
-                const top = header.offsetTop;
-                const backToTop = document.querySelector('#back-to-top');
-                const clientHeight = document.documentElement.clientHeight;
-                const trophy = document.querySelector('#trophy');
-                const about = document.querySelector('#about');
-                const portfolio = document.querySelector('#portfolio');
-                const skills = document.querySelector('#skills');
-                const blog = document.querySelector('#blog');
-                const contact = document.querySelector('#contact');
-                const footer = document.querySelector('footer');
-                let executed = false;
-                let toggleLang = document.querySelector('#lang');
+        // On load & on scroll
+        window.onload = function () {
 
-                // toggleLang.addEventListener('click', function (userData) {
-                //     (toggleLang.checked) ? toggleLang.checked = true : toggleLang.checked = false;
-                //     // toggleLang.checked ? getLanguageData('id_ID') : getLanguageData('en_US');
-                //     getUserData();
-                //     console.log(userData);
-                // });
+            animateWithDelay('.menu-', false, 5, 'animate-fade-in-down');
+            animateWithDelay('.logo', false, 1, 'animate-fade-in-down');
 
+            animateWithDelay('.hero-', false, 5, 'animate-slide-in-left');
+            animateWithDelay('.avatar', false, 1, 'animate-slide-in-right');
 
-                animateWithDelay('.menu-', false, 5, 'animate-fade-in-down');
-                animateWithDelay('.logo', false, 1, 'animate-fade-in-down');
+            // Reset animation
+            animateWithDelay('.menu-', true, 5, 'animate-fade-in-down');
+            animateWithDelay('.logo', true, 1, 'animate-fade-in-down');
+            animateWithDelay('.hero-', true, 5, 'animate-slide-in-left');
+            animateWithDelay('.avatar', true, 1, 'animate-slide-in-right');
 
-                animateWithDelay('.hero-', false, 5, 'animate-slide-in-left');
-                animateWithDelay('.avatar', false, 1, 'animate-slide-in-right');
+            window.onscroll = (function () {
+                return function () {
+                    // Fixed header
+                    if (window.scrollY > top) {
+                        header.classList.add('fixed-header');
+                    } else {
+                        header.classList.remove('fixed-header');
+                    }
 
-                // Reset animation
-                animateWithDelay('.menu-', true, 5, 'animate-fade-in-down');
-                animateWithDelay('.logo', true, 1, 'animate-fade-in-down');
-                animateWithDelay('.hero-', true, 5, 'animate-slide-in-left');
-                animateWithDelay('.avatar', true, 1, 'animate-slide-in-right');
+                    // Back to top
+                    if (window.scrollY > clientHeight) {
+                        backToTop.classList.remove('hidden');
+                        backToTop.classList.add('block');
+                    } else {
+                        backToTop.classList.remove('block');
+                        backToTop.classList.add('hidden');
+                    }
 
-                window.onscroll = (function () {
-                    return function () {
-                        // Fixed header
-                        if (window.scrollY > top) {
-                            header.classList.add('fixed-header');
-                        } else {
-                            header.classList.remove('fixed-header');
+                    // Header & hero section
+                    if (isElementVisible(document.querySelector('#hero'))) {
+                        animateWithDelay('.menu-', false, 5, 'animate-fade-in-down');
+                        animateWithDelay('.logo', false, 1, 'animate-fade-in-down');
+
+                        animateWithDelay('.hero-', false, 5, 'animate-slide-in-left');
+                        animateWithDelay('.avatar', false, 1, 'animate-slide-in-right');
+                    }
+
+                    // Trophy section
+                    if (isElementVisible(trophy)) {
+                        if (!executed) {
+                            animateNum('num-1', 0, 3, 1000);
+                            animateNum('num-2', 0, 10, 3000);
+                            animateNum('num-3', 0, 15, 4000);
+                            animateWithDelay('.trophy-title-', false, 2, 'animate-slide-in-down');
+                            animateWithDelay('.trophy-box-', false, 3, 'animate-fade-in');
                         }
+                        executed = true;
+                    } else {
+                        animateWithDelay('.trophy-box-', true, 3, 'animate-fade-in');
+                        executed = false;
+                    }
 
-                        // Back to top
-                        if (window.scrollY > clientHeight) {
-                            backToTop.classList.remove('hidden');
-                            backToTop.classList.add('block');
-                        } else {
-                            backToTop.classList.remove('block');
-                            backToTop.classList.add('hidden');
-                        }
+                    // About section
+                    if (isElementVisible(about)) {
+                        animateWithDelay('.pic-', false, 3, 'animate-slide-in-left');
+                        animateWithDelay('.about-', false, 8, 'animate-slide-in-right');
+                        animateWithDelay('.work-', false, 2, 'animate-fade-in');
+                    }
 
-                        // Header & hero section
-                        if (isElementVisible(document.querySelector('#hero'))) {
-                            animateWithDelay('.menu-', false, 5, 'animate-fade-in-down');
-                            animateWithDelay('.logo', false, 1, 'animate-fade-in-down');
+                    // Portfolio section
+                    if (isElementVisible(portfolio)) {
+                        animateWithDelay('.portfolio-', false, 2, 'animate-slide-in-left');
+                        animateWithDelay('.portfolio-filter', false, 1, 'animate-slide-in-right');
+                        animateWithDelay('.portfolio-content', false, 1, 'animate-fade-in');
+                        animateWithDelay('.portfolio-btn', false, 1, 'animate-fade-in');
+                    }
 
-                            animateWithDelay('.hero-', false, 5, 'animate-slide-in-left');
-                            animateWithDelay('.avatar', false, 1, 'animate-slide-in-right');
-                        }
+                    // Skills section
+                    if (isElementVisible(skills)) {
+                        animateWithDelay('.skills-', false, 2, 'animate-slide-in-left');
+                        animateWithDelay('.gauge-', false, 6, 'animate-fill-gauge');
+                        animateWithDelay('.skills-btn', false, 1, 'animate-fade-in');
+                    } else {
+                        animateWithDelay('.gauge-', true, 6, 'animate-fill-gauge');
+                    }
 
-                        // Trophy section
-                        if (isElementVisible(trophy)) {
-                            if (!executed) {
-                                animateNum('num-1', 0, 3, 1000);
-                                animateNum('num-2', 0, 10, 3000);
-                                animateNum('num-3', 0, 15, 4000);
-                                animateWithDelay('.trophy-title-', false, 2, 'animate-slide-in-down');
-                                animateWithDelay('.trophy-box-', false, 3, 'animate-fade-in');
-                            }
-                            executed = true;
-                        } else {
-                            animateWithDelay('.trophy-box-', true, 3, 'animate-fade-in');
-                            executed = false;
-                        }
+                    // Blog section
+                    if (isElementVisible(blog)) {
+                        animateWithDelay('.blog-', false, 3, 'animate-slide-in-left');
+                        animateWithDelay('.blog-image', false, 1, 'animate-slide-in-right');
+                    }
 
-                        // About section
-                        if (isElementVisible(about)) {
-                            animateWithDelay('.pic-', false, 3, 'animate-slide-in-left');
-                            animateWithDelay('.about-', false, 8, 'animate-slide-in-right');
-                            animateWithDelay('.work-', false, 2, 'animate-fade-in');
-                        }
+                    // Contact section
+                    if (isElementVisible(contact)) {
+                        animateWithDelay('.contact-', false, 3, 'animate-slide-in-down');
+                        animateWithDelay('.contact-form-', false, 4, 'animate-fade-in');
+                    }
 
-                        // Portfolio section
-                        if (isElementVisible(portfolio)) {
-                            animateWithDelay('.portfolio-', false, 2, 'animate-slide-in-left');
-                            animateWithDelay('.portfolio-filter', false, 1, 'animate-slide-in-right');
-                            animateWithDelay('.portfolio-content', false, 1, 'animate-fade-in');
-                            animateWithDelay('.portfolio-btn', false, 1, 'animate-fade-in');
-                        }
-
-                        // Skills section
-                        if (isElementVisible(skills)) {
-                            animateWithDelay('.skills-', false, 2, 'animate-slide-in-left');
-                            animateWithDelay('.gauge-', false, 6, 'animate-fill-gauge');
-                            animateWithDelay('.skills-btn', false, 1, 'animate-fade-in');
-                        } else {
-                            animateWithDelay('.gauge-', true, 6, 'animate-fill-gauge');
-                        }
-
-                        // Blog section
-                        if (isElementVisible(blog)) {
-                            animateWithDelay('.blog-', false, 3, 'animate-slide-in-left');
-                            animateWithDelay('.blog-image', false, 1, 'animate-slide-in-right');
-                        }
-
-                        // Contact section
-                        if (isElementVisible(contact)) {
-                            animateWithDelay('.contact-', false, 3, 'animate-slide-in-down');
-                            animateWithDelay('.contact-form-', false, 4, 'animate-fade-in');
-                        }
-
-                        // Footer section
-                        if (isElementVisible(footer)) {
-                            animateWithDelay('.footer-logo', false, 1, 'animate-slide-in-left');
-                            animateWithDelay('.footer-menu-', false, 3, 'animate-fade-in');
-                            animateWithDelay('.copy-l', false, 1, 'animate-slide-in-left');
-                            animateWithDelay('.copy-r', false, 1, 'animate-slide-in-right');
-                        }
-                        }
-                    })();
-                }
+                    // Footer section
+                    if (isElementVisible(footer)) {
+                        animateWithDelay('.footer-logo', false, 1, 'animate-slide-in-left');
+                        animateWithDelay('.footer-menu-', false, 3, 'animate-fade-in');
+                        animateWithDelay('.copy-l', false, 1, 'animate-slide-in-left');
+                        animateWithDelay('.copy-r', false, 1, 'animate-slide-in-right');
+                    }
+                    }
+                })();
             }
         }
 
 };
-
-// function getUserData() {
-//     fetch("https://randomuser.me/api/", {
-//         method: "GET",
-//         headers: {
-//             "Content-Type": "application/json"
-//         }
-//     })
-//         .then((response) => {
-//             if (!response.ok) {
-//                 throw new Error('Network response was not OK');
-//             }
-//             return response.json();
-//         })
-//         .then((response) => {
-//             console.log(response);
-//         })
-//         .catch((error) => {
-//             console.error('There has been a problem with your fetch operation:', error);
-//     });
-// }
 
 // is Element Visible
 function isElementVisible(el) {
@@ -243,21 +207,3 @@ function toggleActive(i) {
         filterChildren[i].classList.add('text-bm-oxford');
     }
 }
-
-// Slider
-// document.addEventListener('DOMContentLoaded', () => {
-//     const slider = document.querySelector('#slider');
-//     setTimeout(function moveSlide() {
-//         const max = slider.scrollWidth - slider.clientWidth;
-//         const left = slider.clientWidth;
-
-//         if (max === slider.scrollLeft) {
-//             slider.scrollTo({left: 0, behavior: 'smooth'})
-//         } else {
-//             slider.scrollBy({left, behavior: 'smooth'})
-//         }
-
-//         setTimeout(moveSlide, 2000)
-//     }, 2000)
-
-// })
