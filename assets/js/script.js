@@ -168,12 +168,23 @@ function animateWithDelay(id, started, count, className) {
 // Menu
 const toggleMenu = document.querySelector('#toggle-menu');
 const fullMenu = document.querySelector('#full-menu');
-
+const myModal = document.querySelector("#my-modal");
+const modalBtn = document.querySelector("#modal-btn");
 toggleMenu.addEventListener('click', showMenu);
 
 function showMenu() {
     toggleMenu.classList.toggle('burger-active');
     fullMenu.classList.toggle('hidden');
+}
+
+function toggleModal(id) {
+    const img = document.querySelector('#' + id).src;
+    myModal.classList.toggle('hidden');
+    document.querySelector('#img-modal').src = img;
+}
+
+function closeModal() {
+    myModal.classList.add('hidden');
 }
 
 // Close menu from outside
@@ -206,4 +217,99 @@ function toggleActive(i) {
         filterChildren[i].children[0].classList.add('arrow-down');
         filterChildren[i].classList.add('text-bm-oxford');
     }
+
+    const personal = document.querySelectorAll('.personal');
+    const pro = document.querySelectorAll('.professional');
+    const comingSoon = document.querySelector('#coming-soon');
+    const moreProjects = document.querySelector('#more-projects');
+
+    switch (i) {
+        case 1:
+            if (personal.length === 0) {
+                comingSoon.classList.remove('hidden');
+                comingSoon.classList.add('flex');
+
+                moreProjects.classList.add('hidden');
+                moreProjects.classList.remove('flex');
+
+                toggleClass(personal, true);
+                toggleClass(pro, false);
+            } else {
+                comingSoon.classList.remove('flex');
+                comingSoon.classList.add('hidden');
+
+                moreProjects.classList.remove('hidden');
+                moreProjects.classList.add('flex');
+
+                toggleClass(personal, true);
+                toggleClass(pro, false);
+            }
+            break;
+            break;
+        case 2:
+            if (pro.length === 0) {
+                console.log(pro);
+                comingSoon.classList.remove('hidden');
+                comingSoon.classList.add('flex');
+
+                moreProjects.classList.add('hidden');
+                moreProjects.classList.remove('flex');
+
+                toggleClass(personal, false);
+                toggleClass(pro, true);
+            } else {
+                comingSoon.classList.remove('flex');
+                comingSoon.classList.add('hidden');
+
+                moreProjects.classList.remove('hidden');
+                moreProjects.classList.add('flex');
+
+                toggleClass(personal, false);
+                toggleClass(pro, true);
+            }
+            break;
+        default:
+            if (personal.length === 0 && pro.length === 0) {
+                comingSoon.classList.remove('hidden');
+                comingSoon.classList.add('flex');
+
+                moreProjects.classList.add('hidden');
+                moreProjects.classList.remove('flex');
+
+                toggleClass(personal, true);
+                toggleClass(pro, true);
+            } else {
+                comingSoon.classList.remove('flex');
+                comingSoon.classList.add('hidden');
+
+                moreProjects.classList.remove('hidden');
+                moreProjects.classList.add('flex');
+
+                toggleClass(personal, true);
+                toggleClass(pro, true);
+            }
+    }
+}
+
+function toggleClass(classArray, display) {
+    for (i = 0; i < classArray.length; i++) {
+        if (display) {
+            classArray[i].classList.add('block');
+            classArray[i].classList.remove('hidden');
+        } else {
+            classArray[i].classList.add('hidden');
+            classArray[i].classList.remove('block');
+        }
+    }
+}
+
+const fName = document.querySelector('#first_name');
+const lName = document.querySelector('#last_name');
+const waMe = document.querySelector('#wa-me');
+
+function sendWA() {
+    let first_name = fName.value;
+    let last_name = lName.value;
+    console.log(first_name);
+    waMe.setAttribute('href', 'https://wa.me/083817588579?text=Hi,+my+name+is+' + first_name+' '+last_name+'...');
 }
