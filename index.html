@@ -205,7 +205,7 @@
 						<div
 							class="avatar relative flex w-full justify-center lg:w-1/2">
 							<svg
-								class="absolute top-0 w-96 h-96 md:w-[500px] md:h-[500px]"
+								class="absolute top-0 w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]"
 								viewBox="0 0 200 200"
 								xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -215,7 +215,7 @@
 							</svg>
 
 							<img
-								class="absolute top-0 w-96 h-96 md:w-[500px] md:h-[500px]"
+								class="absolute top-0 w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]"
 								src="assets/img/indras-avatar-super.png"
 								alt="Indras Avatar Super" />
 						</div>
@@ -265,7 +265,7 @@
 								</svg>
 							</div>
 							<h2
-								class="trophy-title-1 text-2xl font-bold sm:text-4xl flex justify-center">
+								class="trophy-title-1 text-xl sm:text-2xl md:text-3xl font-bold lg:text-4xl flex justify-center">
 								The journey has just begun
 							</h2>
 						</div>
@@ -274,7 +274,7 @@
 							id="boxes"
 							class="grid grid-cols-1 space-y-12 max-w-sm mx-auto lg:grid-cols-3 lg:space-y-0 lg:max-w-full lg:gap-6">
 							<div
-								class="trophy-box-1 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-80 h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
+								class="trophy-box-1 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
 								<div>
 									<div
 										id="num-1"
@@ -305,7 +305,7 @@
 							</div>
 
 							<div
-								class="trophy-box-2 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-80 h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
+								class="trophy-box-2 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
 								<div>
 									<div
 										id="num-2"
@@ -335,7 +335,7 @@
 							</div>
 
 							<div
-								class="trophy-box-3 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-80 h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
+								class="trophy-box-3 group relative border-2 border-bm-amber border-dashed rounded-tr-3xl w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center mx-auto hover:border-solid hover:bg-bm-gold hover:text-bm-federal transition-ease cursor-pointer">
 								<div>
 									<div
 										id="num-3"
@@ -391,9 +391,9 @@
 
 										<div
 											class="pic-3 w-56 h-[284px] absolute top-0 left-0 rounded-md overflow-hidden">
-											<img
+											<img width="224" height="284"
 												src="assets/img/indras-photo.jpg"
-												class="w-56 object-cover grayscale-[50%] transition-ease hover:grayscale-0" />
+												class="object-cover object-top grayscale-[50%] transition-ease hover:grayscale-0" />
 										</div>
 									</div>
 
@@ -465,7 +465,10 @@
 												href="https://indraswork.my.id/blog"
 												target="_blank">
 												<svg class="text-bm-gold transition-ease group-hover:text-bm-federal"
-												xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+												fill="currentColor"
+												role="img" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+												width="24"
+												height="24">
 													<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
 												  </svg>
 
@@ -566,9 +569,9 @@
 							</div>
 
 							<div
-								class="portfolio-filter flex justify-center items-center text-base font-semibold">
+								class="portfolio-filter flex justify-center items-center text-sm font-semibold">
 								<div
-									class="filter relative bg-bm-amber px-6 py-4 rounded-l-md text-bm-oxford hover:text-bm-oxford transition-ease whitespace-nowrap cursor-pointer"
+									class="filter relative bg-bm-amber p-4 rounded-l-md text-bm-oxford hover:text-bm-oxford transition-ease whitespace-nowrap cursor-pointer"
 									onclick="toggleActive(0)">
 									All Projects
 									<div
@@ -576,7 +579,7 @@
 								</div>
 
 								<div
-									class="filter relative bg-bm-amber px-6 py-4 hover:text-bm-oxford transition-ease cursor-pointer"
+									class="filter relative bg-bm-amber p-4 hover:text-bm-oxford transition-ease cursor-pointer"
 									onclick="toggleActive(1)">
 									Personal
 									<div
@@ -584,7 +587,7 @@
 								</div>
 
 								<div
-									class="filter relative bg-bm-amber px-6 py-4 rounded-r-md hover:text-bm-oxford transition-ease cursor-pointer"
+									class="filter relative bg-bm-amber p-4 rounded-r-md hover:text-bm-oxford transition-ease cursor-pointer"
 									onclick="toggleActive(2)">
 									Professional
 									<div
@@ -678,7 +681,7 @@
 		<!-- Portfolio modal -->
 		<div
 			id="my-modal"
-			class="fixed hidden z-[9999] h-fit top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-md bg-bm-platinum/30 backdrop-blur-sm shadow-lg p-4"
+			class="fixed hidden rounded-md bg-bm-platinum/30 backdrop-blur-sm shadow-lg p-4 z-[9999] top-1/2 left-1/2 -translate-y-1/2 w-full h-fit -translate-x-1/2 sm:w-[500px] sm:-ml-[250px] sm:translate-x-0 md:w-[600px] md:-ml-[300px] lg:w-[650px] lg:-ml-[325px]"
 			role="alert">
 			<button
 				id="modal-btn"
@@ -733,11 +736,11 @@
 									</div>
 									<div class="flex items-center">
 										<div
-											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											class="flex items-center mr-4 w-[230px] md:w-[250px] lg:w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
 											<div
-												class="gauge-1 w-[288px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+												class="gauge-1 w-[207px] md:w-[225px] lg:w-[270px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
 										</div>
-										<div class="text-xl">98%</div>
+										<div class="text-xl">90%</div>
 									</div>
 								</div>
 
@@ -747,11 +750,11 @@
 									</div>
 									<div class="flex items-center">
 										<div
-											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											class="flex items-center mr-4 w-[230px] md:w-[250px] lg:w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
 											<div
-												class="gauge-2 w-[282px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+												class="gauge-2 w-[207px] md:w-[225px] lg:w-[270px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
 										</div>
-										<div class="text-xl">97%</div>
+										<div class="text-xl">90%</div>
 									</div>
 								</div>
 
@@ -761,11 +764,11 @@
 									</div>
 									<div class="flex items-center">
 										<div
-											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											class="flex items-center mr-4 w-[230px] md:w-[250px] lg:w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
 											<div
-												class="gauge-3 w-[258px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+												class="gauge-3 w-[184px] md:w-[200px] lg:w-[240px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
 										</div>
-										<div class="text-xl">93%</div>
+										<div class="text-xl">80%</div>
 									</div>
 								</div>
 
@@ -775,11 +778,11 @@
 									</div>
 									<div class="flex items-center">
 										<div
-											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											class="flex items-center mr-4 w-[230px] md:w-[250px] lg:w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
 											<div
-												class="gauge-4 w-[270px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+												class="gauge-4 w-[195px] md:w-[212px] lg:w-[255px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
 										</div>
-										<div class="text-xl">95%</div>
+										<div class="text-xl">85%</div>
 									</div>
 								</div>
 
@@ -789,11 +792,11 @@
 									</div>
 									<div class="flex items-center">
 										<div
-											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											class="flex items-center mr-4 w-[230px] md:w-[250px] lg:w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
 											<div
-												class="gauge-5 w-[270px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+												class="gauge-5 w-[195px] md:w-[212px] lg:w-[255px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
 										</div>
-										<div class="text-xl">95%</div>
+										<div class="text-xl">85%</div>
 									</div>
 								</div>
 
@@ -803,11 +806,11 @@
 									</div>
 									<div class="flex items-center">
 										<div
-											class="flex items-center mr-4 w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
+											class="flex items-center mr-4 w-[230px] md:w-[250px] lg:w-[300px] h-10 border border-bm-amber rounded-md p-1 space-x-1">
 											<div
-												class="gauge-6 w-[258px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
+												class="gauge-6 w-[184px] md:w-[200px] lg:w-[240px] h-8 bg-gradient-to-r from-bm-gold to-bm-flax rounded-sm"></div>
 										</div>
-										<div class="text-xl">93%</div>
+										<div class="text-xl">80%</div>
 									</div>
 								</div>
 							</div>
@@ -949,7 +952,9 @@
 							</div>
 
 							<div class="mt-16 w-fit mx-auto">
-								<a id="wa-me" type="button" onclick="sendWA()"  target="_blank" aria-label="Chat on WhatsApp" href=""><img alt="Chat on WhatsApp" src="assets/img/WhatsAppButtonGreenLarge.svg" /> </a>
+								<a id="wa-me" onclick="sendWA()"  target="_blank" href="">
+									<img alt="Chat on WhatsApp" src="assets/img/WhatsAppButtonGreenLarge.svg" />
+								</a>
 							</div>
 						</div>
 					</div>

@@ -192,7 +192,8 @@ function closeModal() {
 }
 
 // Close menu from outside
-window.addEventListener('click', function (e) {
+const htmlBody = document.querySelector('body');
+htmlBody.addEventListener('click', function (e) {
     if (e.target != toggleMenu && e.target != fullMenu) {
         toggleMenu.classList.remove('burger-active');
         fullMenu.classList.add('hidden');
@@ -317,5 +318,5 @@ function sendWA() {
     let first_name = fName.value;
     let last_name = lName.value;
     console.log(first_name);
-    waMe.setAttribute('href', 'https://wa.me/083817588579?text=Hi,+my+name+is+' + first_name+' '+last_name+'...');
+    waMe.setAttribute('href', 'https://wa.me/6283817588579?text=Hi,+my+name+is+' + first_name+' '+last_name+'...');
 }
