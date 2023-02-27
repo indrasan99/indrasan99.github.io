@@ -106,7 +106,7 @@ document.onreadystatechange = () => {
                     // Contact section
                     if (isElementVisible(contact)) {
                         animateWithDelay('.contact-', false, 3, 'animate-slide-in-down');
-                        animateWithDelay('.contact-form-', false, 4, 'animate-fade-in');
+                        animateWithDelay('.contact-form', false, 1, 'animate-fade-in');
                     }
 
                     // Footer section
@@ -178,9 +178,13 @@ function showMenu() {
 }
 
 function toggleModal(id) {
+    console.log(id);
     const img = document.querySelector('#' + id).src;
+    const imgTxt = document.querySelector('.' + id + '-txt').innerHTML;
+    console.log(imgTxt);
     myModal.classList.toggle('hidden');
     document.querySelector('#img-modal').src = img;
+    document.querySelector('#text-modal').innerHTML = imgTxt;
 }
 
 function closeModal() {
@@ -241,6 +245,7 @@ function toggleActive(i) {
                 moreProjects.classList.remove('hidden');
                 moreProjects.classList.add('flex');
 
+                txtModal = proTxt;
                 toggleClass(personal, true);
                 toggleClass(pro, false);
             }
@@ -248,7 +253,6 @@ function toggleActive(i) {
             break;
         case 2:
             if (pro.length === 0) {
-                console.log(pro);
                 comingSoon.classList.remove('hidden');
                 comingSoon.classList.add('flex');
 
@@ -292,7 +296,9 @@ function toggleActive(i) {
 }
 
 function toggleClass(classArray, display) {
+
     for (i = 0; i < classArray.length; i++) {
+
         if (display) {
             classArray[i].classList.add('block');
             classArray[i].classList.remove('hidden');
