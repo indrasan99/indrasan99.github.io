@@ -178,10 +178,8 @@ function showMenu() {
 }
 
 function toggleModal(id) {
-    console.log(id);
     const img = document.querySelector('#' + id).src;
     const imgTxt = document.querySelector('.' + id + '-txt').innerHTML;
-    console.log(imgTxt);
     myModal.classList.toggle('hidden');
     document.querySelector('#img-modal').src = img;
     document.querySelector('#text-modal').innerHTML = imgTxt;
@@ -246,11 +244,9 @@ function toggleActive(i) {
                 moreProjects.classList.remove('hidden');
                 moreProjects.classList.add('flex');
 
-                txtModal = proTxt;
                 toggleClass(personal, true);
                 toggleClass(pro, false);
             }
-            break;
             break;
         case 2:
             if (pro.length === 0) {
@@ -317,6 +313,5 @@ const waMe = document.querySelector('#wa-me');
 function sendWA() {
     let first_name = fName.value;
     let last_name = lName.value;
-    console.log(first_name);
     waMe.setAttribute('href', 'https://wa.me/6283817588579?text=Hi,+my+name+is+' + first_name+' '+last_name+'...');
 }
