@@ -81,8 +81,8 @@ document.onreadystatechange = () => {
 					if (isElementVisible(trophy)) {
 						if (!executed) {
 							animateNum('num-1', 0, 5, 1000);
-							animateNum('num-2', 0, 10, 3000);
-							animateNum('num-3', 0, 15, 4000);
+							animateNum('num-2', 0, 15, 3000);
+							animateNum('num-3', 0, 30, 4000);
 							animateWithDelay(
 								'.trophy-title-',
 								false,
